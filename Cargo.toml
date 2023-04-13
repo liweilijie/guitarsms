@@ -1,0 +1,17 @@
+[package]
+name = "guitar"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aliyun_sdk = "0.1.0"
+anyhow = "1.0.66"
+tokio = { version = "1.21.2", features = ["full"] }
+tracing = "0.1.31"
+tracing-subscriber = { version = "0.3.9", features = ["env-filter", "time", "local-time"] }
+time = { version = "0.3.9", features = ["macros"] }
+clap = { version = "3.1.5", features = ["derive"] }
+jiebars = "0.1.0"
+itertools = "0.10.5"
