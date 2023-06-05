@@ -1,17 +1,15 @@
-mod sms;
 mod cli;
+mod sms;
 
-use std::fs;
+use crate::cli::{Args, Person};
 use anyhow::Result;
-use tracing::{debug, info};
+use clap::Parser;
+use itertools::Itertools;
+use std::fs;
 use time::macros::format_description;
 use time::UtcOffset;
+use tracing::{debug, info};
 use tracing_subscriber::fmt::time::OffsetTime;
-use clap::Parser;
-use crate::cli::{Args, Person};
-use itertools::Itertools;
-
-
 
 #[tokio::main]
 async fn main() -> Result<()> {
@@ -38,15 +36,23 @@ async fn main() -> Result<()> {
     let mut phone: String = "18180815129".to_string();
 
     match args.person {
-        Person::Magic=> {
-            phone = "15826105957".to_string(); // 839740765
+        Person::Magic => {
+            phone = "15826105957".to_string();
+            // 839740765  511304198809056228
+            // (brother)杜川江(17794585581)
             info!("duqq.")
-        },
-        Person::Trust=> {
+        }
+        Person::Trust => {
             phone = "18281168822".to_string();
+            // 1990.7.26(农历)
+            // 513489537 nihao712
+            // wx 账号Xj20225201210。  密码wxx521lj都是小写的
+            // 讷河市双兴村长大
+            // 四平市铁西区小串王烧烤店
+            // 最重要的人：王振岩，于春华，肖蓓雅，肖虎妹
             info!("wxx");
-        },
-        Person::Me=> {
+        }
+        Person::Me => {
             // phone = "18180815129".to_string();
             info!("me");
         }
@@ -70,8 +76,8 @@ async fn main() -> Result<()> {
         "MSevUswTfVxwKaayJad5iGAe9lKfzJ".to_string(),
     );
 
-    let template_code =  "SMS_235793799".to_string();
-    let sign_name =  "恒乐淘".to_string();
+    let template_code = "SMS_235793799".to_string();
+    let sign_name = "恒乐淘".to_string();
 
     let code = "j".to_string();
 
@@ -94,7 +100,6 @@ async fn main() -> Result<()> {
         let sms_response = sms_client.send_sms(sms_request).await?;
         info!("success send sms and response: {:?}", sms_response);
     }
-
 
     Ok(())
 }
