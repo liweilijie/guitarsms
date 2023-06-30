@@ -33,23 +33,25 @@ async fn main() -> Result<()> {
 
     // read content from file.
 
-    let mut phone: String = "18180815129".to_string();
+    let mut phone: String = "13608025220".to_string();
 
     match args.person {
         Person::Magic => {
             phone = "15826105957".to_string();
             // 839740765  511304198809056228
             // (brother)杜川江(17794585581)
+            // 1988.8.28(农历)
             info!("duqq.")
         }
         Person::Trust => {
             phone = "18281168822".to_string();
-            // 1990.7.26(农历)
+            // 1990.7.26(农历)(19-20点出生)
             // 513489537 nihao712
             // wx 账号Xj20225201210。  密码wxx521lj都是小写的
             // 讷河市双兴村长大
             // 四平市铁西区小串王烧烤店
             // 最重要的人：王振岩，于春华，肖蓓雅，肖虎妹
+            // 王浚力：18644821004,13278146607
             info!("wxx");
         }
         Person::Me => {
