@@ -1,14 +1,23 @@
 # guitar
 
- 将一个文件里面的所有通知新功能或者的描述也好，新的告警通知内容也好，拆分成一条一条短信发送出去。
+this is for notify any message by sms.
 
- - 读取文件所有内容。
- - 拆分成70个字一个内容部分。
- - 分批次发送。
- - 发送需要有间隔几秒。
+ - read content from file by `-c` argument. default file `read.md`.
+ - truncate content by 70 words because of the sms limit words size.
+ - to send message in batches.
+ - must interval of several seconds while sending message.
+ - encrypt the sensitive information.
+ - decrypt the sensitive information before sending message.
+
+
+common cmd options:
 
  ```bash
- ./target/debug/guitar -c m.md magic
- ./target/debug/guitar -c m.md me
- ./target/debug/guitar -c m.md trust
+ # build
+ make build
+ make build debug=1
+ # send
+ make onlyme
+ make magic
+ make trust
  ```

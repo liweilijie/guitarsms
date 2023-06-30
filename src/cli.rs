@@ -14,7 +14,6 @@ pub struct Args {
     pub person: Person,
 }
 
-
 #[derive(Debug, Copy, Clone, PartialEq, Eq, PartialOrd, Ord, ValueEnum)]
 pub enum Person {
     Magic,

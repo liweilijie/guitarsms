@@ -15,3 +15,5 @@ time = { version = "0.3.9", features = ["macros"] }
 clap = { version = "3.1.5", features = ["derive"] }
 jiebars = "0.1.0"
 itertools = "0.10.5"
+config-file = "0.2.3"
+serde = { version = "1.0.164", features = ["derive"] }

@@ -40,3 +40,5 @@ target/
 # ctags
 **/*.vi
 m.md
+dec
+**/magic.toml
