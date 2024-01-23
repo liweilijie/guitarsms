@@ -42,3 +42,4 @@ target/
 m.md
 dec
 **/magic.toml
+.DS_Store
